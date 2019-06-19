@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata%7CLaila%7COpen+Sans+Condensed:300%7CPT+Serif%7CRaleway" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./styles.css">
+   <title></title>
+
+   <script>
+       $(document).ready(function () {
+
+           //when link is clicked
+           $("a").click(function (event) {
+
+               //prevent the page from reloading (which is default behavior)
+               //when a link is clicked which would make the page flicker
+               event.preventDefault();
+
+               //grab the target href attribute off the a tag
+               var targetID = $(this).attr('href');
+
+               //tell the page to animate a scrolling
+               $('html,body').animate({
+
+
+                   //that brings top of the target to top of page
+                   //1500 is in milliseconds
+                   //swing means ease at start/end, faster in middle
+                   scrollTop: $(targetID).offset().top
+               }, 1000, 'swing');
+
+           });
+
+
+       });
+   </script>
+
+
+</head>
+
+<body>
+   <nav>
+       <ul>
+           <li class="one"><a href="#panel1">Pugs </a></li>
+           <li class="one"><a href="#panel2">Huskies</a></li>
+           <li class="one"><a href="#panel3">Doodles</a></li>
+       </ul>
+
+   </nav>
+   <div id="wrap">
+       <div id="panel1" class="panel">
+           <!--All of your HTML for the first panel goes here -->
+
+
+           <b><h1 class="logo"> DOGS </h1></b>
+
+
+
+
+
+
+
+           <img class= "two" src="Images/food.jpg" width="200" height="200" alt="" />
+      <img class="one" src="Images/brekafast.jpg" width="200" height="200" alt="" />
+
+
+       </div>
+
+       </div>
+       <div id="panel2" class="panel">
+           <!--All of your HTML for the second panel goes here -->
+
+
+
+
+
+
+
+
+
+
+
+       </div>
+       <div id="panel3" class="panel">
+           <!--All of your HTML for the third panel goes here -->
+
+
+
+
+
+            <div id="footer">
+    <p> Copyright: Angela Parra
+       Pop Shop- 1234 avenue, MD 20878
+                2/25/19</p>
+
+
+      </div>
+
+
+
+       </div>
+
+
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</body>
+
+</html>
